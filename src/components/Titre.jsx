@@ -2,7 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 
 const Propos = (props) => {
-    const classes = useStyles()
+    const classes = useStyles(props)
     return (
         <div className={classes.wrap}>
             <h2 className={classes.title}>{props.name} - </h2>
@@ -22,10 +22,11 @@ const useStyles = createUseStyles({
     },
     wrap: {
         display: 'flex',
-        justifyContent: 'left',
+        justifyContent: props => props.direction,
+        alignItems: 'baseline'
     },
     imgTitle: {
-        width: '4vw',
+        height: '4vh',
         marginLeft: '1vw',
     },
 })
