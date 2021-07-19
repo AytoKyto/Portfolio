@@ -12,7 +12,7 @@ const Dtilte = (props) => {
 
 const useStyles = createUseStyles({
     wrap: {
-        
+
     },
 })
 export default Dtilte;
